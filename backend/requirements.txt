@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+sqlalchemy>=2.0,<3.0
+psycopg[binary]
+alembic
+PyJWT
+pwdlib[argon2]
+httpx
+pytest
+pytest-asyncio
+ruff

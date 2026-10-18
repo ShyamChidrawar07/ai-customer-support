@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1000" viewBox="0 0 700 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI Customer Support platform architecture, portrait view</title>
+  <desc id="desc">A browser calls the FastAPI backend. Authentication, services, and repositories lead down to SQLAlchemy, Psycopg, and PostgreSQL. A future AI service branches from the domain services.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#475569" /></marker>
+    <marker id="arrowFuture" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed" /></marker>
+    <style>
+      text { font-family: Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .title { font-size: 26px; font-weight: 700; }
+      .group { font-size: 18px; font-weight: 700; fill: #334155; }
+      .nodeTitle { font-size: 17px; font-weight: 650; }
+      .nodeSub { font-size: 14px; fill: #475569; }
+      .node { fill: #fff; stroke: #64748b; stroke-width: 2; rx: 12; }
+      .future { fill: #faf5ff; stroke: #8b5cf6; stroke-width: 2; stroke-dasharray: 8 6; rx: 12; }
+      .flow { fill: none; stroke: #475569; stroke-width: 2.5; marker-end: url(#arrow); }
+      .futureFlow { fill: none; stroke: #7c3aed; stroke-width: 2.5; stroke-dasharray: 7 5; marker-end: url(#arrowFuture); }
+    </style>
+  </defs>
+
+  <rect width="700" height="1000" fill="#ffffff" />
+  <text x="35" y="42" class="title">Platform architecture</text>
+
+  <rect x="50" y="65" width="600" height="145" fill="#f8fafc" stroke="#cbd5e1" rx="16" />
+  <text x="72" y="96" class="group">Client</text>
+  <rect x="185" y="112" width="330" height="76" class="node" />
+  <text x="350" y="142" text-anchor="middle" class="nodeTitle">Browser · React UI</text>
+  <text x="350" y="166" text-anchor="middle" class="nodeSub">Vite · Tailwind</text>
+
+  <path d="M350 210 V232" class="flow" />
+  <text x="365" y="226" class="nodeSub">HTTPS / JSON</text>
+
+  <rect x="50" y="240" width="600" height="415" fill="#eff6ff" stroke="#93c5fd" rx="16" />
+  <text x="72" y="272" class="group">FastAPI backend</text>
+  <rect x="170" y="290" width="360" height="52" class="node" />
+  <text x="350" y="323" text-anchor="middle" class="nodeTitle">Versioned REST API</text>
+  <path d="M350 342 V354" class="flow" />
+  <rect x="170" y="362" width="360" height="52" class="node" />
+  <text x="350" y="395" text-anchor="middle" class="nodeTitle">Authentication + access checks</text>
+  <path d="M350 414 V426" class="flow" />
+  <rect x="170" y="434" width="260" height="58" class="node" />
+  <text x="300" y="469" text-anchor="middle" class="nodeTitle">Domain services</text>
+  <path d="M300 492 V510" class="flow" />
+  <rect x="170" y="518" width="360" height="52" class="node" />
+  <text x="350" y="551" text-anchor="middle" class="nodeTitle">Domain repositories</text>
+
+  <rect x="455" y="434" width="170" height="78" class="future" />
+  <text x="540" y="461" text-anchor="middle" class="nodeTitle" fill="#6d28d9">Future AI</text>
+  <text x="540" y="485" text-anchor="middle" class="nodeSub">Knowledge + provider</text>
+  <text x="540" y="503" text-anchor="middle" class="nodeSub">Human review</text>
+  <path d="M430 463 H447" class="futureFlow" />
+
+  <path d="M350 570 V690" class="flow" />
+  <text x="365" y="633" class="nodeSub">SQLAlchemy query</text>
+
+  <rect x="50" y="700" width="600" height="270" fill="#f0fdf4" stroke="#86efac" rx="16" />
+  <text x="72" y="732" class="group">Database access</text>
+  <rect x="185" y="750" width="330" height="52" class="node" />
+  <text x="350" y="783" text-anchor="middle" class="nodeTitle">SQLAlchemy ORM</text>
+  <path d="M350 802 V814" class="flow" />
+  <rect x="185" y="822" width="330" height="52" class="node" />
+  <text x="350" y="855" text-anchor="middle" class="nodeTitle">Psycopg driver</text>
+  <path d="M350 874 V886" class="flow" />
+  <rect x="185" y="894" width="330" height="52" class="node" />
+  <text x="350" y="927" text-anchor="middle" class="nodeTitle">PostgreSQL server</text>
+</svg>
